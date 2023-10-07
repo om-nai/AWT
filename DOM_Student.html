@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        body{
+            font-family: Arial;
+            font-size: 10pt;
+        }
+        table{
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        table th{
+            background-color: #F7F7F7;
+            color: #333;
+            font-weight: bold;
+        }
+        table th, table td{
+            padding: 5px;
+            border-color: #ccc;
+        }
+		input[type="button"]{
+		background-color: #08F;
+		color:#fff;}
+    </style>
+</head>
+<body>
+    <script type ="text/javascript">
+        window.onload=function()
+        {
+            var customer=new Array();
+            customer.push(["Om","India"]);
+            customer.push(["Keval","Russia"]);
+            customer.push(["Darshan","South Korea"]);
+            customer.push(["Ronak","Australia"]);
+
+            for(var i=0;i<customer.length;i++)
+            {
+                AddRow(customer[i][0],customer[i][1]);
+            }
+        }
+    </script>
+    <table id="tblCustomers" cellpadding="0" cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><input type="text" id="txtName" /></td>
+                <td><input type="text" id="txtCountry" /></td>
+                <td><input type="button" onclick="Add()" value="Add" /></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
